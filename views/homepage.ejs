@@ -7,6 +7,18 @@
   <h1>All Blogs</h1>
   <a href="/createBlog">Create New Blog</a>
   <hr />
-  
+  <% if (blogs.length === 0) { %>
+    <h2>No blogs found!</h2>
+  <% } else { %>
+    <% blogs.forEach(blog => { %>
+      <div>
+        <h2><%= blog.title %></h2>
+        <h3><%= blog.subtitle %></h3>
+        <p><%= blog.description %></p>
+        <hr />
+      </div>
+    <% }); %>
+  <% } %>
+
 </body>
 </html>
