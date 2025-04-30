@@ -7,6 +7,13 @@
   <!-- <h1><%= blog.title %></h1>
   <h3><%= blog.subtitle %></h3>
   <p><%= blog.description %></p> -->
+ 
+  <h2><%= blog[0].title %></h2>
+  <h3><%= blog[0].subtitle %></h3>
+  <p><%= blog[0].description %></p>
+
   <a href="/">Back to Home</a>
+  <a href="/editBlog/<%= blog[0].id %>">Edit</a>
+  <a href="/delete/<%= blog[0].id %>">Delete</a>
 </body>
 </html>
